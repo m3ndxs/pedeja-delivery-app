@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppColors {
   // Primary (azul)
@@ -62,9 +63,7 @@ class ThemeManager {
         foregroundColor: Colors.white,
         elevation: 0,
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
     ),
 
@@ -73,25 +72,23 @@ class ThemeManager {
       style: OutlinedButton.styleFrom(
         foregroundColor: AppColors.primary,
         side: const BorderSide(color: AppColors.primary),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
     ),
 
     // Tipografia
-    textTheme: const TextTheme(
-      headlineLarge: TextStyle(
+    textTheme: GoogleFonts.poppinsTextTheme().copyWith(
+      headlineLarge: GoogleFonts.poppins(
         fontSize: 24,
         fontWeight: FontWeight.bold,
         color: AppColors.textPrimary,
       ),
-      titleMedium: TextStyle(
+      titleMedium: GoogleFonts.poppins(
         fontSize: 18,
         fontWeight: FontWeight.w600,
         color: AppColors.textPrimary,
       ),
-      bodyMedium: TextStyle(
+      bodyMedium: GoogleFonts.poppins(
         fontSize: 14,
         color: AppColors.textSecondary,
       ),
@@ -102,9 +99,7 @@ class ThemeManager {
       color: AppColors.surface,
       elevation: 2,
       shadowColor: Colors.black12,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
     ),
 
     // Inputs
