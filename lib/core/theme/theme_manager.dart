@@ -56,26 +56,6 @@ class ThemeManager {
       centerTitle: true,
     ),
 
-    // 🔘 Botões
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primary,
-        foregroundColor: Colors.white,
-        elevation: 0,
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      ),
-    ),
-
-    // Botão secundário (Outlined)
-    outlinedButtonTheme: OutlinedButtonThemeData(
-      style: OutlinedButton.styleFrom(
-        foregroundColor: AppColors.primary,
-        side: const BorderSide(color: AppColors.primary),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-      ),
-    ),
-
     // Tipografia
     textTheme: GoogleFonts.poppinsTextTheme().copyWith(
       headlineLarge: GoogleFonts.poppins(
@@ -86,11 +66,11 @@ class ThemeManager {
       titleMedium: GoogleFonts.poppins(
         fontSize: 18,
         fontWeight: FontWeight.w600,
-        color: AppColors.textPrimary,
+        color: AppColors.textLight,
       ),
       bodyMedium: GoogleFonts.poppins(
         fontSize: 14,
-        color: AppColors.textSecondary,
+        color: AppColors.textLight,
       ),
     ),
 

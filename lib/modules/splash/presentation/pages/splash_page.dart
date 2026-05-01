@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pedeja_app/core/theme/theme_manager.dart';
+import 'package:pedeja_app/modules/auth/presentation/pages/auth_page.dart';
+import 'package:pedeja_app/modules/splash/presentation/widgets/logo.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -20,6 +21,14 @@ class _SplashPageState extends State<SplashPage> {
         opacity = 1.0;
       });
     });
+
+    Future.delayed(Duration(seconds: 5), () {
+      Navigator.pushReplacement(
+        // ignore: use_build_context_synchronously
+        context,
+        MaterialPageRoute(builder: (_) => AuthPage()), 
+      );
+    });
   }
   
   @override
@@ -30,25 +39,7 @@ class _SplashPageState extends State<SplashPage> {
         child: AnimatedOpacity(
           opacity: opacity,
           duration: Duration(seconds: 2),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: EdgeInsetsGeometry.only(bottom: 16),
-                child: Image.asset(
-                  "assets/logos/logo.png",
-                ),
-              ),
-              Text(
-                "PedeJá".toUpperCase(),
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w800,
-                  color: AppColors.secondary
-                ),
-              ),
-            ],
-          ),
+          child: Logo(),
         ),
       ),
     );
